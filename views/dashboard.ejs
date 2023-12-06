@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vistaar Solutions</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+    <style>
+        #one-block{
+            display: none;
+        }
+        /* body {
+            padding-top: 56px;
+        } */
+        .sidebar {
+            position: fixed;
+            top: 56px;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 20px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            position: fixed;
+            /* top: 0; */
+            width: 100%;
+            z-index: 1030;
+        }
+        .aside{
+          position: fixed;
+            height: 800px;
+            width: 250px;
+        }
+        .aside_height{
+            width: 250px;
+            
+        }
+        .sectionNav{
+            list-style-type: none;
+            height: 50px;
+            width: 200px;
+        }
+        .navWidth{
+            width: 1300px;
+            margin-left: 260px;
+        }
+        .pagination-buttons{
+          position: absolute;
+          left: 1380px;
+        }
+    </style>
+</head>
+<body>
+  
+  <div class="d-flex">
+        <div class="bg-dark aside">
+          <nav class="navbar navbar-dark bg-dark aside_height" >
+            <div class="container-fluid ">
+              <!-- <a class="navbar-brand ps-4 fw-bold fs-4 navTextColor" href="">Logo</a> -->
+              <img height="40px" style="border-radius: 8px;" src="https://uploads-ssl.webflow.com/61b9a0d531bc5ea62566a3be/6229b248ee3f765b597524e7_8.png" alt="">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"       data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </nav>
+          <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark" >
+            <div class="bg-dark p-4" style="margin-top: 90px;">
+              <h4 class="text-body-emphasis">Categories</h4><br>
+              
+              <h6 class="text-body-emphasis ">
+                <form action="/movies/genres/Action"
+                method="GET"
+                style="display: indivne">
+                <button type="submit" class="btn">Action</button>
+              </form>
+              </h6>
+              <h6 class="text-body-emphasis ">
+                <form action="/movies/genres/Horror"
+                method="GET"
+                style="display: indivne">
+                <button type="submit" class="btn">Horror</button>
+              </form></h6>
+              <h6 class="text-body-emphasis ">
+                <form action="/movies/genres/Comedy"
+                method="GET"
+                style="display: indivne">
+                <button type="submit" class="btn">Comedy</button>
+              </form></h6>
+              <h6 class="text-body-emphasis ">
+                <form action="/movies/genres/Drama"
+                method="GET"
+                style="display: indivne">
+                <button type="submit" class="btn">Drama</button>
+              </form></h6>
+              <h6 class="text-body-emphasis ">
+                <form action="/movies/genres/Adventure"
+                method="GET"
+                style="display: indivne">
+                <button type="submit" class="btn">Adventure</button>
+              </form></h6>
+              <h6 class="text-body-emphasis ">
+                <form action="/movies/genres/Biography"
+                method="GET"
+                style="display: indivne">
+                <button type="submit" class="btn">Biography</button>
+              </form></h6>
+              <h6 class="text-body-emphasis ">
+                <form action="/movies/genres/Animation"
+                method="GET"
+                style="display: indivne">
+                <button type="submit" class="btn">Animation</button>
+              </form></h6>
+              <h6 class="text-body-emphasis ">
+                <form action="/movies/genres/Short"
+                method="GET"
+                style="display: indivne">
+                <button type="submit" class="btn">Short</button>
+              </form>
+              </h6>
+              <h6 class="text-body-emphasis "><form action="/movies/genres/Fantasy"
+                method="GET"
+                style="display: indivne">
+                <button type="submit" class="btn">Fantasy</button>
+              </form></h6>
+              <h6 class="text-body-emphasis ">
+                <form action="/movies/genres/Crime"
+                method="GET"
+                style="display: indivne">
+                <button type="submit" class="btn">Crime</button>
+              </form></h6>
+            </div>
+          </div>
+        </div>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navWidth" >
+          <!-- Left side items -->
+          <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 35px;">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Dashboard</a>
+              </li>
+              
+              <li class="nav-item active">
+                <a class="nav-link" href="./index.html">Add Data</a>
+              </li>
+              
+              
+            </ul>
+          </div>
+
+          
+
+          
+    
+          <!-- Right side items -->
+          <div class="navbar-nav ml-auto"  >
+            <form action="/search/1" method="GET" class="form" style="display:flex; margin-right: 60px;">
+              <input class="form-control " type="text" placeholder="Search" aria-label="Search" id="title" name="title" required>
+              <button class="btn btn-outline-success " type="submit">Search</button>
+            </form>
+            
+          </div>
+        </nav>
+        <div style="display: flex; flex-direction: column;">
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4" style="position: relative; left: 274px; top:50px">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+              <h2>Dashboard <span style="font-size: 20px; align-items: center;"> > Home >   </span></h2>
+            </div>
+            
+          </main>
+        
+
+<!-- /////////////////Table//////////////// -->
+
+        
+    <table style="border-collapse: collapse; width: 100%; margin-left: 250px; margin-top: 58px;">
+        <thead  >
+            <tr >
+                <th style="border: 1px solid #ddd; padding: 7px ; text-align: center;">Sr. No</th>
+                <th style="border: 1px solid #ddd; padding: 7px ; text-align: center;">Poster</th>
+                <th style="border: 1px solid #ddd; padding: 7px ; text-align: center;">Title</th>
+                <th style="border: 1px solid #ddd; padding: 7px ; text-align: center;">Genres</th>
+                <th style="border: 1px solid #ddd; padding: 7px ; text-align: center;">Release Year</th>
+                <th style="border: 1px solid #ddd; padding: 7px ; text-align: center;">IMDB Rating</th>
+                <th style="border: 1px solid #ddd; padding: 7px ; text-align: center;">Runtime</th>
+                <th style="border: 1px solid #ddd; padding: 7px ; text-align: center;">Update</th>
+                <th style="border: 1px solid #ddd; padding: 7px ; text-align: center;">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (Temp.movies && Temp.movies.length > 0) { %>
+                <% for (let i = 0; i < Temp.movies.length; i++) { %>
+                    <tr>
+                        <td style="border: 1px solid #ddd; padding: 4px; text-align: center;"><%= i+1%></td>
+                        <td style="border: 1px solid #ddd; padding: 4px; text-align: center;"><img width="50px" height="40px" src="<%= Temp.movies[i].poster %>" alt="" srcset=""></td>
+                        <td style="border: 1px solid #ddd; padding: 4px; width: 200px; text-align: center;"><%= Temp.movies[i].title %></td>
+                        <td style="border: 1px solid #ddd; padding: 4px; text-align: center;"><%= Temp.movies[i].genres.join(', ')
+                           %></td>
+                        <td style="border: 1px solid #ddd; padding: 4px; text-align: center;"><%= Temp.movies[i].year %></td>
+                        <td style="border: 1px solid #ddd; padding: 4px; text-align: center;"><%= Temp.movies[i].imdb.rating%>/10</td>
+                        <td style="border: 1px solid #ddd; padding: 4px; text-align: center;"><%= Temp.movies[i].runtime %> Minutes</td>
+                        <td style="border: 1px solid #ddd; padding: 4px; text-align: center;">
+                          <form action="/updateData/itemId"
+                            method="PATCH"
+                            style="display: indivne">
+                            <button type="submit" class="btn-delete btn btn-success"><a class="nav-link" href="./index2.html">Update</a></button>
+                          </form>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 4px; text-align: center;">
+                          <form action="/delete/<%= Temp.movies[i]._id %>"
+                            method="post"
+                            style="display: indivne">
+                            <button type="submit" class="btn-delete btn btn-danger">Delete</button>
+                          </form>
+                        </td>
+                    </tr>
+                <% } %>
+            <% } else { %>
+                <tr>
+                    <td colspan="3" style="border: 1px solid #ddd; padding: 4px; text-align: center;">No movies found</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+  </div>
+    
+    
+  </div>
+
+    <nav aria-label="Page navigation example" class="pagination-buttons" style="position: fixed;">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="/home/<%= Temp.pre%>" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="/home/<%= 1%>">1</a></li>
+          <li class="page-item"><a class="page-link" href="/home/<%= 2%>">2</a></li>
+          <li class="page-item">
+            <a class="page-link" href="/home/<%= Temp.next%>" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+    </nav>
+
+
+
+
+    
+
+    <!-- <script>
+      let movielist= ejs.querySelectorAll("#movieCat li")
+
+      movielist.forEach(function(Item){
+        Item.addEventListener('click',()=>{
+          document.getElementById('CategoryName').innerHTML=movies[i].genres[0]
+        })
+      })
+    </script> -->
+
+    
+
+    <!-- <script>
+        console.log(Data);
+        function ChangeData(){
+            document.getElementById("one-block").style.display="block"
+        }
+    </script> -->
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
